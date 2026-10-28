@@ -13,12 +13,12 @@ FORM_URL = "https://forms.gle/MGXGCRcbFBvwLHxd8"
 # On GitHub Actions these come from the "Run workflow" form.
 # When running locally, the defaults after the comma are used.
 # =====================================================================
-CSV_FILE = os.getenv("CSV_FILE", "").strip() or "dataset.csv"
+CSV_FILE = os.getenv("CSV_FILE", "dataset.csv").strip() or "dataset.csv"
 START_INDEX = int(os.getenv("START_INDEX", "").strip() or "0")   # 0 = Row 1
 _total = os.getenv("TOTAL_RESPONSES", "").strip()
 TOTAL_RESPONSES = int(_total) if _total else None                # None = as many as time allows
 MAX_RUNTIME_MINUTES = int(os.getenv("MAX_RUNTIME_MINUTES", "").strip() or "300")  # stops before GitHub's 6h limit
-SUCCESS_TEXT = "Your response has been recorded"  # Change if you customised the form's confirmation message
+SUCCESS_TEXT = "Your response has been recorded."  # Change if you customised the form's confirmation message
 SCREENSHOT_ON_FAILURE = True
 MAX_PAGES = 10
 # =====================================================================
