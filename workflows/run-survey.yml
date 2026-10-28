@@ -14,7 +14,7 @@ on:
       csv_file:
         description: "CSV file to read"
         required: true
-        default: "antibiotic_survey_cleaned.csv"
+        default: "dataset.csv"
 
 jobs:
   submit:
